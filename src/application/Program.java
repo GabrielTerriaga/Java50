@@ -18,10 +18,9 @@ public class Program {
 		list.add(new Product("Mouse", 50.00));
 		list.add(new Product("Tablet", 350.50));
 		list.add(new Product("HD Case", 80.90));
-
-		Function<Product, String> func = p -> p.getName().toUpperCase();
+		
 		//function com map + static method
-		List<String> namesUp = list.stream().map(func).collect(Collectors.toList());
+		List<String> namesUp = list.stream().map(p -> p.getName().toUpperCase()).collect(Collectors.toList());
 		
 		namesUp.forEach(System.out::println);
 	}
