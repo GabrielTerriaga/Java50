@@ -19,7 +19,7 @@ public class Program {
 		list.add(new Product("HD Case", 80.90));
 
 		//function com map + static method
-		List<String> namesUp = list.stream().map(Product::staticUpperCase).collect(Collectors.toList());
+		List<String> namesUp = list.stream().map(Product::nonStaticUpperCase).collect(Collectors.toList());
 		
 		namesUp.forEach(System.out::println);
 	}
